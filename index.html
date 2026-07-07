@@ -116,7 +116,7 @@
             <div class="text-center mb-12">
                 <span class="text-xs font-bold text-turquoise uppercase tracking-widest block mb-2">Operational Frameworks</span>
                 <h2 class="text-3xl font-black text-gray-900 tracking-tight">Our Sourcing & Logistics Solutions</h2>
-                <p class="text-[11px] text-gray-5xl mt-2">Slides transition automatically every 6 seconds • Use directional controls for manual navigation</p>
+                <p class="text-[11px] text-gray-5xl mt-2">Slides transition automatically • Use directional controls for manual navigation</p>
             </div>
 
             <!-- Slider Wrapper Workspace Window -->
@@ -409,7 +409,7 @@
 
         function initTimer() {
             clearInterval(slideTimer);
-            slideTimer = setInterval(triggerNext, 3000);
+            slideTimer = setInterval(triggerNext, 6000);
         }
 
         document.getElementById('nextBtn').addEventListener('click', () => {

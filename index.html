@@ -35,64 +35,80 @@
 
     <!-- FIXED BANNER TOP HEADER AREA -->
     <nav class="fixed top-0 left-0 right-0 h-20 bg-white border-b border-gray-100 z-50 shadow-sm px-6">
-        <div class="max-w-7xl mx-auto h-full flex items-center justify-between relative">
+        <div class="max-w-7xl mx-auto h-full flex items-center justify-between">
             
-            <!-- Left buffer space to balance the layout centered -->
-            <div class="hidden lg:block w-1/4"></div>
-
-            <!-- Absolute Center: Company Brand Title / Logo Position -->
-            <div class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 text-center">
-                <a href="#" class="text-2xl font-black tracking-tight text-gray-900 block">JoA Global</a>
-                <span class="text-[9px] font-bold text-turquoise uppercase tracking-widest block -mt-1">Asia to Europe Rail</span>
+            <!-- Presentation Style Slide 1 Logo Layout Left Aligned -->
+            <div class="text-left">
+                <a href="#" class="text-2xl font-black tracking-tight text-gray-900 block leading-none">JOA Global</a>
+                <span class="text-[10px] font-bold text-gray-500 uppercase tracking-wider block mt-1">Global Sourcing & Logistics Solution</span>
             </div>
 
-            <!-- Right Aligned Navigation Menu Links Bar -->
-            <div class="flex items-center gap-6 text-xs font-bold text-gray-600 tracking-wide uppercase w-full lg:w-auto lg:justify-end">
-                <a href="#about" class="hover:text-turquoise transition-colors duration-200 hidden sm:inline-block">About JoA Global</a>
-                <a href="#solutions" class="hover:text-turquoise transition-colors duration-200">Solutions</a>
-                <a href="#industries" class="hover:text-turquoise transition-colors duration-200">Industries</a>
-                <a href="#infrastructure" class="hover:text-turquoise transition-colors duration-200 hidden md:inline-block">Infrastructure</a>
-                <a href="#contact" class="bg-turquoise text-white px-4 py-2 rounded-md shadow-sm hover:bg-opacity-90 transition-all duration-200">Contact Us</a>
-            </div>
+            <!-- Interactive Three-Line Menu Hamburger Button -->
+            <button id="menuBtn" class="flex flex-col justify-between w-6 h-4 group focus:outline-none z-50" aria-label="Toggle Navigation Menu">
+                <span class="w-full h-0.5 bg-gray-900 rounded-full transition-all duration-300"></span>
+                <span class="w-full h-0.5 bg-gray-900 rounded-full transition-all duration-300"></span>
+                <span class="w-full h-0.5 bg-gray-900 rounded-full transition-all duration-300"></span>
+            </button>
 
         </div>
     </nav>
 
-    <!-- SECTION 1: ABOUT JOA GLOBAL & CORE EUROPEAN PROBLEMS -->
+    <!-- SLIDE-OUT FLYOUT NAVIGATION MENU OVERLAY -->
+    <div id="sideMenu" class="fixed inset-y-0 right-0 w-full sm:w-80 bg-gray-900 text-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col justify-center p-8">
+        <div class="space-y-6 text-base font-bold uppercase tracking-wider">
+            <a href="#about" class="menu-link block text-gray-400 hover:text-turquoise transition-colors duration-200">About JoA Global</a>
+            <a href="#solutions" class="menu-link block text-gray-400 hover:text-turquoise transition-colors duration-200">Sourcing & Logistics Solutions</a>
+            <a href="#industries" class="menu-link block text-gray-400 hover:text-turquoise transition-colors duration-200">Industries Covered</a>
+            <a href="#infrastructure" class="menu-link block text-gray-400 hover:text-turquoise transition-colors duration-200">Global Fulfillment Infrastructure</a>
+            <a href="#contact" class="menu-link block text-turquoise hover:underline transition-all duration-200">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- SECTION 1: ABOUT JOA GLOBAL (KEY POINTS FORMAT) -->
     <section id="about" class="bg-white py-20 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold text-turquoise uppercase tracking-widest block mb-2">Corporate Core Mission</span>
-                <h2 class="text-4xl font-black text-gray-900 mb-6 tracking-tight">Bridging Cross-Border Supply Infrastructure</h2>
-                <p class="text-gray-6xl text-base leading-relaxed">
-                    JoA Global was built with a definitive mission: to completely de-risk and simplify international trade for modern European enterprise buyers. We act as your primary localized procurement engine and absolute freight pipeline across Asian industrial centers, absorbing operational friction so our partners can focus on core market growth.
-                </p>
+                <h2 class="text-4xl font-black text-gray-900 tracking-tight">Bridging Cross-Border Supply Infrastructure</h2>
             </div>
 
-            <!-- Focus Matrix Grid Points -->
-            <div class="grid md:grid-cols-2 gap-12 mt-12 pt-12 border-t border-gray-50">
-                <div>
-                    <h3 class="text-xl font-extrabold text-gray-900 mb-4 flex items-center gap-2">
-                        <span class="w-2 h-2 bg-turquoise rounded-full"></span> What We Do Natively
-                    </h3>
-                    <p class="text-sm text-gray-6xl leading-relaxed mb-4">We control specialized multi-region operations providing automated item selection pipelines, rigid manufacturing contract oversight, product compliance clearances, and deep freight consolidation tracking vectors under a single localized umbrella.</p>
-                    <p class="text-sm text-gray-6xl leading-relaxed">No separate brokers, no translation barriers, and no independent third-party logisticians required. One continuous supply line.</p>
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Point 1 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                    <div class="w-8 h-8 bg-turquoise bg-opacity-20 text-gray-900 font-bold rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0 text-sm">✓</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Our Absolute Mission</h3>
+                    <p class="text-xs text-gray-6xl leading-relaxed">De-risking international factory trade for modern European enterprise buyers through integrated single-party accountability.</p>
                 </div>
-                <div class="bg-gray-900 text-white rounded-xl p-8 relative overflow-hidden">
-                    <h3 class="text-xl font-extrabold text-turquoise mb-4 flex items-center gap-2">
-                        <span class="w-2 h-2 bg-red-400 rounded-full animate-ping"></span> Modern European Market Headaches
-                    </h3>
-                    <ul class="text-xs space-y-3 text-gray-300">
-                        <li class="flex items-start gap-2">
-                            <strong class="text-white shrink-0">• Margin Degenerations:</strong> Unvetted middlemen driving up component fees alongside unexpected tariff additions.
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <strong class="text-white shrink-0">• Quality Deviations:</strong> Missing structural specifications and factory batch variances discovered far too late at European docks.
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <strong class="text-white shrink-0">• Grid Disruption:</strong> Fragmented communication streams with logistics agencies causing terminal gridlock and stock outages.
-                        </li>
-                    </ul>
+                <!-- Point 2 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                    <div class="w-8 h-8 bg-turquoise bg-opacity-20 text-gray-900 font-bold rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0 text-sm">✓</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Native Asian Procurement</h3>
+                    <p class="text-xs text-gray-6xl leading-relaxed">Direct manufacturer contract placement, continuous facility oversight, and rigid quality verification gates managed on-site.</p>
+                </div>
+                <!-- Point 3 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                    <div class="w-8 h-8 bg-turquoise bg-opacity-20 text-gray-900 font-bold rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0 text-sm">✓</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Unified Logistics Engineering</h3>
+                    <p class="text-xs text-gray-6xl leading-relaxed">Strategic sea/air freight routing with complete cross-border customs filing clearance managed straight to domestic warehouses.</p>
+                </div>
+            </div>
+
+            <!-- European Buyer Headaches Bullet Grid -->
+            <div class="mt-12 bg-gray-900 text-white rounded-2xl p-8 max-w-4xl mx-auto">
+                <h3 class="text-lg font-bold text-turquoise mb-6 text-center md:text-left">Critical Disadvantages Faced by Independent European Importers:</h3>
+                <div class="grid md:grid-cols-3 gap-6 text-xs text-gray-300">
+                    <div>
+                        <span class="font-extrabold text-white block mb-1">01. Margin Erosion</span>
+                        Unchecked middlemen adding compounding hidden fees alongside unpredictable localized tariff calculation models.
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-white block mb-1">02. Manufacturing Variances</span>
+                        Unverified component substitutions and design deviations discovered only after items clear destination ports.
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-white block mb-1">03. Infrastructure Blocks</span>
+                        Fragmented coordination with independent logistics companies causing long terminal delays and stock outages.
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,10 +117,10 @@
     <!-- SECTION 2: 4 SOLUTIONS PACKAGES - CAROUSEL SLIDESHOW COMPONENT -->
     <section id="solutions" class="py-20 bg-gray-50 overflow-hidden border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12 relative">
+            <div class="text-center mb-12">
                 <span class="text-xs font-bold text-turquoise uppercase tracking-widest block mb-2">Operational Frameworks</span>
                 <h2 class="text-3xl font-black text-gray-900 tracking-tight">Our Sourcing & Logistics Solutions</h2>
-                <p class="text-xs text-gray-500 mt-2">Slides transition automatically every 3 seconds • Use directional controls for manual navigation</p>
+                <p class="text-[11px] text-gray-5xl mt-2">Slides transition automatically every 3 seconds • Use directional controls for manual navigation</p>
             </div>
 
             <!-- Slider Wrapper Workspace Window -->
@@ -127,32 +143,32 @@
                         <div class="text-xl font-black text-gray-900 pt-4 border-t border-gray-100">£200 - £500 <span class="text-xs font-normal text-gray-500">Fixed Fee Matrix</span></div>
                     </div>
 
-                    <!-- Slide 2 (Hero Highlights) -->
-                    <div class="carousel-slide absolute inset-0 p-8 flex flex-col justify-between transition-all duration-700 opacity-0 transform translate-x-full bg-gradient-to-br from-white to-turquoise to-opacity-5">
+                    <!-- Slide 2 (Hero Highlights - Lighter Background for Ultra Readability) -->
+                    <div class="carousel-slide absolute inset-0 p-8 flex flex-col justify-between transition-all duration-700 opacity-0 transform translate-x-full bg-cyan-50 bg-opacity-30">
                         <div>
                             <div class="flex justify-between items-center mb-4">
                                 <span class="text-[10px] font-black uppercase tracking-wider text-turquoise">Tier 02 Hero Solution</span>
                                 <span class="bg-turquoise text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Complete Pipeline</span>
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">B2B End-to-End Enterprise Solution</h3>
-                            <p class="text-gray-6xl text-sm leading-relaxed mb-4">Our premier institutional arrangement. We establish an on-the-ground presence directly inside overseas factory zones to completely shield your enterprise from manufacturing, quality, and routing risks.</p>
-                            <span class="text-xs font-semibold text-turquoise">• On-site Material Inspections • Export Clearances Handled • Multi-Modal Delivery to Door</span>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-4 font-normal">Our premier institutional arrangement. We establish an on-the-ground presence directly inside overseas factory zones to completely shield your enterprise from manufacturing, quality, and routing risks.</p>
+                            <span class="text-xs font-bold text-teal-600">• On-site Material Inspections • Export Clearances Handled • Multi-Modal Delivery to Door</span>
                         </div>
-                        <div class="text-xl font-black text-gray-900 pt-4 border-t border-gray-100">Sliding Scale <span class="text-xs font-normal text-gray-500">Tier-Based Commission Only</span></div>
+                        <div class="text-xl font-black text-gray-900 pt-4 border-t border-gray-200">Sliding Scale <span class="text-xs font-normal text-gray-500">Tier-Based Commission Only</span></div>
                     </div>
 
-                    <!-- Slide 3 (Hero Highlights) -->
-                    <div class="carousel-slide absolute inset-0 p-8 flex flex-col justify-between transition-all duration-700 opacity-0 transform translate-x-full bg-gradient-to-br from-white to-turquoise to-opacity-5">
+                    <!-- Slide 3 (Hero Highlights - Lighter Background for Ultra Readability) -->
+                    <div class="carousel-slide absolute inset-0 p-8 flex flex-col justify-between transition-all duration-700 opacity-0 transform translate-x-full bg-cyan-50 bg-opacity-30">
                         <div>
                             <div class="flex justify-between items-center mb-4">
                                 <span class="text-[10px] font-black uppercase tracking-wider text-turquoise">Tier 03 Hero Solution</span>
                                 <span class="bg-turquoise text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Digital Scale Architecture</span>
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">B2C Dropshipping & 3PL Integration</h3>
-                            <p class="text-gray-6xl text-sm leading-relaxed mb-4">A hyper-automated framework deployed for fast-growing digital direct-to-consumer organizations needing high-speed item execution across cross-border fulfillment networks.</p>
-                            <span class="text-xs font-semibold text-turquoise">• Automated ERP System Syncs • Custom Branded Unboxing Packs • Smart Warehouse Storage Nodes</span>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-4 font-normal">A hyper-automated framework deployed for fast-growing digital direct-to-consumer organizations needing high-speed item execution across cross-border fulfillment networks.</p>
+                            <span class="text-xs font-bold text-teal-600">• Automated ERP System Syncs • Custom Branded Unboxing Packs • Smart Warehouse Storage Nodes</span>
                         </div>
-                        <div class="text-xl font-black text-gray-900 pt-4 border-t border-gray-100">Inventory at Factory Cost <span class="text-xs font-normal text-gray-500">+ Dynamic Handling Fee</span></div>
+                        <div class="text-xl font-black text-gray-900 pt-4 border-t border-gray-200">Inventory at Factory Cost <span class="text-xs font-normal text-gray-500">+ Dynamic Handling Fee</span></div>
                     </div>
 
                     <!-- Slide 4 -->
@@ -172,8 +188,8 @@
                 </div>
 
                 <!-- Manual Directional Push Controllers Buttons -->
-                <button id="prevBtn" class="absolute left--6 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 text-gray-700 font-bold z-20 transition-all">&larr;</button>
-                <button id="nextBtn" class="absolute right--6 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 text-gray-700 font-bold z-20 transition-all">&rarr;</button>
+                <button id="prevBtn" class="absolute -left-6 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 text-gray-700 font-bold z-20 transition-all">&larr;</button>
+                <button id="nextBtn" class="absolute -left-6 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 text-gray-700 font-bold z-20 transition-all" style="left: auto; right: -24px;">&rarr;</button>
 
             </div>
         </div>
@@ -185,7 +201,6 @@
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-xs font-bold text-turquoise uppercase tracking-widest block mb-2">Sourcing Domains</span>
                 <h2 class="text-3xl font-black text-gray-900 tracking-tight">Industries & Specialized Product Verticals</h2>
-                <p class="text-gray-5xl text-sm mt-2">Vetted manufacturing pools with active component pipelines ready for distribution setup.</p>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -193,40 +208,40 @@
                 <div class="border border-gray-100 rounded-xl overflow-hidden bg-gray-50 shadow-sm flex flex-col justify-between">
                     <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=300&q=80" alt="Elderly Support Hardware" class="w-full h-32 object-cover">
                     <div class="p-4 flex-grow">
-                        <h4 class="font-bold text-xs text-gray-900 mb-2">Elderly Support</h4>
-                        <p class="text-[10px] text-gray-5xl leading-relaxed">Medical-grade mobility assists, advanced walking frames, customized support systems, and bathroom safety apparatus.</p>
+                        <h4 class="font-bold text-xs text-gray-900 mb-1">Elderly Support</h4>
+                        <p class="text-[10px] text-gray-5xl leading-relaxed">Medical-grade mobility assists, advanced walking frames, and bathroom safety apparatus.</p>
                     </div>
                 </div>
                 <!-- Vertical 2 -->
                 <div class="border border-gray-100 rounded-xl overflow-hidden bg-gray-50 shadow-sm flex flex-col justify-between">
                     <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=300&q=80" alt="Home & Kitchen Tools" class="w-full h-32 object-cover">
                     <div class="p-4 flex-grow">
-                        <h4 class="font-bold text-xs text-gray-900 mb-2">Home & Kitchen Tools & Appliances</h4>
-                        <p class="text-[10px] text-gray-5xl leading-relaxed">Precision kitchen tools, smart culinary equipment, storage systems, and energy-efficient small appliances.</p>
+                        <h4 class="font-bold text-xs text-gray-900 mb-1">Home & Kitchen Tools</h4>
+                        <p class="text-[10px] text-gray-5xl leading-relaxed">Precision kitchen tools, storage systems, and small appliances.</p>
                     </div>
                 </div>
-                <!-- Vertical 3 -->
+                <!-- Vertical 3 (Updated Image Request: Toys & Children Learning Books) -->
                 <div class="border border-gray-100 rounded-xl overflow-hidden bg-gray-50 shadow-sm flex flex-col justify-between">
-                    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=300&q=80" alt="Child Development Products" class="w-full h-32 object-cover">
+                    <img src="https://images.unsplash.com/photo-1515488042361-404e9250afef?auto=format&fit=crop&w=300&q=80" alt="Toys and Children Learning Books" class="w-full h-32 object-cover">
                     <div class="p-4 flex-grow">
-                        <h4 class="font-bold text-xs text-gray-900 mb-2">Child Development</h4>
-                        <p class="text-[10px] text-gray-5xl leading-relaxed">Ergonomic learning infrastructure, eco-friendly developmental toys, and infant safety setups matching EN71 regulations.</p>
+                        <h4 class="font-bold text-xs text-gray-900 mb-1">Toys & Learning Books</h4>
+                        <p class="text-[10px] text-gray-5xl leading-relaxed">Eco-friendly developmental educational toys and children's literature matching EN71 regulations.</p>
                     </div>
                 </div>
                 <!-- Vertical 4 -->
                 <div class="border border-gray-100 rounded-xl overflow-hidden bg-gray-50 shadow-sm flex flex-col justify-between">
                     <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=300&q=80" alt="Electronic Gadgets Pool" class="w-full h-32 object-cover">
                     <div class="p-4 flex-grow">
-                        <h4 class="font-bold text-xs text-gray-900 mb-2">Electronic Gadgets</h4>
-                        <p class="text-[10px] text-gray-5xl leading-relaxed">Smart lifestyle accessories, IoT sensory devices, home automation units, and custom PCB items.</p>
+                        <h4 class="font-bold text-xs text-gray-900 mb-1">Electronic Gadgets</h4>
+                        <p class="text-[10px] text-gray-5xl leading-relaxed">Smart lifestyle accessories, IoT sensory devices, and custom PCB items.</p>
                     </div>
                 </div>
                 <!-- Vertical 5 -->
                 <div class="border border-gray-100 rounded-xl overflow-hidden bg-gray-50 shadow-sm flex flex-col justify-between">
                     <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=300&q=80" alt="Beauty & Wellness Kits" class="w-full h-32 object-cover">
                     <div class="p-4 flex-grow">
-                        <h4 class="font-bold text-xs text-gray-900 mb-2">Beauty & Relaxation</h4>
-                        <p class="text-[10px] text-gray-5xl leading-relaxed">Personal massagers, specialized skincare apparatus, wellness instrumentation, and targeted therapy toolkits.</p>
+                        <h4 class="font-bold text-xs text-gray-900 mb-1">Beauty & Relaxation</h4>
+                        <p class="text-[10px] text-gray-5xl leading-relaxed">Personal massagers, specialized skincare apparatus, and wellness instrumentation.</p>
                     </div>
                 </div>
             </div>
@@ -239,7 +254,6 @@
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-xs font-bold text-turquoise uppercase tracking-widest block mb-2">Logistical Reach</span>
                 <h2 class="text-3xl font-black text-gray-900 tracking-tight">Global Fulfillment Infrastructure</h2>
-                <p class="text-gray-6xl text-sm mt-2">Active intercontinental air/sea commercial pipelines linking cross-border hubs directly to domestic European networks.</p>
             </div>
 
             <!-- Centralized Graph Box Workspace -->
@@ -262,44 +276,40 @@
         </div>
     </section>
 
-    <!-- SECTION 5: HERO B2B OPERATIONAL SHOWCASE (ELDERLY hardware LOGISTICS) -->
+    <!-- SECTION 5: HERO B2B OPERATIONAL SHOWCASE (ELDERLY ASSISTING MOBILITY CHAIR) -->
     <section class="max-w-6xl mx-auto px-6 py-20">
         <div class="bg-gray-900 text-white rounded-3xl overflow-hidden shadow-xl grid md:grid-cols-12 items-center">
             
             <div class="p-8 md:p-12 lg:p-16 md:col-span-7">
                 <span class="text-xs font-bold text-turquoise uppercase tracking-widest bg-turquoise bg-opacity-10 px-3 py-1 rounded-full inline-block mb-4">Enterprise Operations Showcase</span>
-                <h2 class="text-3xl font-black text-white tracking-tight mb-4">Tier 2 Integration: Medical & Mobility Hardware Pipeline</h2>
+                <h2 class="text-3xl font-black text-white tracking-tight mb-4">Tier 2 Integration: Elderly Assisting Mobility Chair Pipeline</h2>
                 <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                    Sourcing complex specialized mobility products like **ergonomic wheelchairs** and **powered assistant moving chairs** introduces strict compliance and testing barriers. JoA Global fully sanitizes this procedure for European distributors.
+                    Sourcing technical mechanical systems like manual wheelchairs and advanced **elderly assisting mobility chairs** demands rigorous regulatory testing. JoA Global delivers a transparent, completely hands-off framework for European procurement managers.
                 </p>
 
                 <!-- Step Pipeline Block -->
                 <div class="space-y-6 relative border-l border-gray-800 ml-2 pl-6">
                     <div class="relative">
                         <span class="absolute -left-[31px] top-0.5 bg-turquoise text-gray-900 text-[10px] font-black rounded-full w-4 h-4 flex items-center justify-center">1</span>
-                        <h4 class="text-sm font-bold text-white mb-1">Review Your Custom Selection</h4>
-                        <p class="text-xs text-gray-400">Review options cleanly within your customized factory sourcing documentation report.</p>
+                        <h4 class="text-sm font-bold text-white mb-1">Choose from your Custom Sourcing Report</h4>
+                        <p class="text-xs text-gray-400">Simply evaluate unvetted, compliance-vetted manufacturer profiles compiled strictly to your product specification criteria.</p>
                     </div>
                     <div class="relative">
                         <span class="absolute -left-[31px] top-0.5 bg-turquoise text-gray-900 text-[10px] font-black rounded-full w-4 h-4 flex items-center justify-center">2</span>
-                        <h4 class="text-sm font-bold text-white mb-1">JoA Global Absorbs All Operation Risk</h4>
-                        <p class="text-xs text-gray-400">Our native managers oversee material pressure checks, weld safety auditing, ISO compliance, export documents, and border custom filing clearance.</p>
+                        <h4 class="text-sm font-bold text-white mb-1">JoA Global Handles the Rest</h4>
+                        <p class="text-xs text-gray-400">Our regional operators direct real-time structural assembly auditing, CE/ISO compliance verification, export filing, and sea-freight booking controls.</p>
                     </div>
                     <div class="relative">
                         <span class="absolute -left-[31px] top-0.5 bg-turquoise text-gray-900 text-[10px] font-black rounded-full w-4 h-4 flex items-center justify-center">3</span>
-                        <h4 class="text-sm font-bold text-white mb-1">Direct Warehouse Intake Arrival</h4>
-                        <p class="text-xs text-gray-400">The sealed shipping container arrives directly at your specified inland storage doors. Procurement has never been this streamlined.</p>
+                        <h4 class="text-sm font-bold text-white mb-1">Inland Warehouse Arrival</h4>
+                        <p class="text-xs text-gray-400">The finalized import freight drops directly at your designated regional storage bay door. Procurement made easy.</p>
                     </div>
-                </div>
-
-                <div class="mt-8 pt-6 border-t border-gray-800 text-xs font-medium text-turquoise">
-                    &check; Zero Overseas Communication Hassles • &check; Fully Cleared Delivery Destinations
                 </div>
             </div>
 
-            <!-- Image Side Graphic Container space -->
+            <!-- Image Side Graphic Container Space (Updated Image Request: Assisted Mobility Chair Context) -->
             <div class="h-full min-h-[400px] md:col-span-5 relative">
-                <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&q=80" alt="Specialized Medical Mobility Hardware Deployment" class="absolute inset-0 w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Elderly Assisting Mobility Chair Production and Support Care" class="absolute inset-0 w-full h-full object-cover">
             </div>
 
         </div>
@@ -320,7 +330,7 @@
                     </a>
                 </div>
                 
-                <!-- Encoded WhatsApp Messaging Hyperlink Button -->
+                <!-- Encoded WhatsApp Sourcing Greeting Key Button -->
                 <div class="text-center">
                     <p class="text-[10px] uppercase text-gray-500 font-bold tracking-widest mb-2">Direct Operations Link</p>
                     <a href="https://wa.me/447529937532?text=Hi,%20I%20would%20like%20to%20know%20about%20global%20sourcing%20and%20logistics%20solution." target="_blank" class="bg-turquoise text-gray-900 font-black px-6 py-3.5 rounded-lg shadow-lg hover:bg-opacity-95 transition-all duration-200 inline-block text-xs uppercase tracking-wider">
@@ -335,14 +345,48 @@
         </div>
     </section>
 
-    <!-- NATIVE CAROUSEL ENGINE LOGIC SCRIPT -->
+    <!-- INTERACTIVE NAV MENU & CAROUSEL JAVASCRIPT CONTROL LOGIC -->
     <script>
+        // --- FLYOUT MENU COMPONENT ENGINE ---
+        const menuBtn = document.getElementById('menuBtn');
+        const sideMenu = document.getElementById('sideMenu');
+        const menuLinks = document.querySelectorAll('.menu-link');
+        const lines = menuBtn.querySelectorAll('span');
+
+        function toggleMenu() {
+            const isOpen = sideMenu.classList.contains('translate-x-0');
+            if (isOpen) {
+                sideMenu.classList.remove('translate-x-0');
+                sideMenu.classList.add('translate-x-full');
+                // Revert cross back to sandwich lines
+                lines[0].classList.remove('rotate-45', 'translate-y-1.5', 'bg-white');
+                lines[0].classList.add('bg-gray-900');
+                lines[1].classList.remove('opacity-0');
+                lines[2].classList.remove('-rotate-45', '-translate-y-1.5', 'bg-white');
+                lines[2].classList.add('bg-gray-900');
+            } else {
+                sideMenu.classList.remove('translate-x-full');
+                sideMenu.classList.add('translate-x-0');
+                // Morph structural hamburger lines into a close cross shape
+                lines[0].classList.add('rotate-45', 'translate-y-1.5', 'bg-white');
+                lines[0].classList.remove('bg-gray-900');
+                lines[1].classList.add('opacity-0');
+                lines[2].classList.add('-rotate-44', '-translate-y-1.5', 'bg-white');
+                lines[2].classList.remove('bg-gray-900');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        // Auto fold menu drawer backwards once any direct internal cross link target is targeted
+        menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+
+        // --- CAROUSEL SLIDESHOW LOGIC COMPONENT ---
         const slides = document.querySelectorAll('.carousel-slide');
         let currentIdx = 0;
         let slideTimer;
 
         function renderSlides(targetIndex) {
-            // Clean up old bounding constraints safely
             slides.forEach((slide, idx) => {
                 slide.classList.remove('opacity-100', 'translate-x-0', 'opacity-0', 'translate-x-full', '-translate-x-full');
                 
@@ -372,18 +416,17 @@
             slideTimer = setInterval(triggerNext, 3000);
         }
 
-        // Attach Manual Push Event Controllers
         document.getElementById('nextBtn').addEventListener('click', () => {
             triggerNext();
-            initTimer(); // Reset clock execution on active customer interaction
+            initTimer(); 
         });
 
         document.getElementById('prevBtn').addEventListener('click', () => {
             triggerPrev();
-            initTimer(); // Reset clock execution on active customer interaction
+            initTimer(); 
         });
 
-        // Fire Carousel Logic Initialization 
+        // Initialize Carousel Timeline loops
         initTimer();
     </script>
 

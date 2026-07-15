@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Browser Tab Icon (Favicon) -->
+    <link rel="icon" type="image/jpeg" href="logo-big(square).png">
     <title>JoA Global | Global Sourcing & Logistics Solution</title>
     <!-- Tailwind CSS Framework -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -37,10 +39,15 @@
     <nav class="fixed top-0 left-0 right-0 h-20 bg-[#E6FAFA] border-b border-cyan-100 border-opacity-60定位 z-50 shadow-sm px-6 backdrop-blur-md">
         <div class="max-w-7xl mx-auto h-full flex items-center justify-between">
             
-            <!-- Presentation Style Slide 1 Logo Layout Left Aligned -->
-            <div class="text-left">
-                <a href="#" class="text-2xl font-black tracking-tight text-teal-600 block leading-none drop-shadow-sm">JoA Global</a>
-                <span class="text-[10px] font-bold text-black uppercase tracking-wider block mt-1">Global Sourcing & Logistics Solution</span>
+            <!-- Logo Integration (Using square logo.jpeg) -->
+            <div class="flex items-center gap-3">
+                <a href="#" class="flex items-center gap-3">
+                    <img src="Logo-big(square).png" alt="JoA Global Logo" class="h-12 w-12 object-contain rounded-md shadow-sm">
+                    <div class="text-left">
+                        <span class="text-xl font-black tracking-tight text-white block leading-none drop-shadow-sm">JoA Global</span>
+                        <span class="text-[9px] sm:text-[10px] font-bold text-black uppercase tracking-wider block mt-1">Global Sourcing & Logistics Solution</span>
+                    </div>
+                </a>
             </div>
 
             <!-- Interactive Three-Line Menu Hamburger Button -->
@@ -64,6 +71,22 @@
         </div>
     </div>
 
+    <!-- HERO SECTION WITH BRAND BANNER BACKGROUND (Using banner.png) -->
+    <header class="relative bg-gray-900 text-white py-32 px-6 overflow-hidden">
+        <!-- Background Banner Image with Dark Overlay for Text Readability -->
+        <div class="absolute inset-0 z-0">
+            <img src="Banner.png" alt="JoA Global Logistics Banner" class="w-full h-full object-cover opacity-25">
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-950 to-transparent opacity-80"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <span class="text-turquoise text-xs font-bold uppercase tracking-widest block mb-3">Welcome to JoA Global</span>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4 max-w-2xl leading-none">Your Direct Pipeline to Asia's Top Suppliers</h1>
+            <p class="text-gray-300 text-sm md:text-base max-w-xl mb-8">We bridge cross-border supply infrastructure, de-risking factory sourcing and engineering seamless logistics to your European warehouse.</p>
+            <a href="#contact" class="bg-turquoise text-gray-900 font-bold px-6 py-3 rounded-lg hover:bg-opacity-95 transition-all text-xs uppercase tracking-wider">Start Sourcing Today</a>
+        </div>
+    </header>
+    
     <!-- SECTION 1: ABOUT JoA GLOBAL (KEY POINTS FORMAT) -->
     <section id="about" class="bg-white py-20 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6">
